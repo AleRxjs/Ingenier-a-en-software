@@ -1,9 +1,0 @@
-@startuml
-actor Cliente
-actor "Sistema de Reservas" as Sistema
-
-Cliente --> (Hacer reserva)
-(Hacer reserva) --> Sistema : Verifica disponibilidad
-Sistema --> Cliente : Confirmar reserva
-
-@enduml
