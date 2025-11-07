@@ -1,0 +1,12 @@
+@startuml
+actor Administrador
+actor "Sistema de Reservas" as Sistema
+
+Administrador --> (Agregar plato)
+Administrador --> (Editar plato)
+Administrador --> (Eliminar plato)
+(Agregar plato) --> Sistema
+(Editar plato) --> Sistema
+(Eliminar plato) --> Sistema
+
+@enduml
