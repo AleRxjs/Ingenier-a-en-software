@@ -1,0 +1,12 @@
+@startuml
+actor Maestro
+actor Administrador
+actor "Sistema de Registro" as Sistema
+
+Administrador --> (Buscar estudiante)
+Maestro --> (Buscar estudiante)
+(Buscar estudiante) --> Sistema : Filtra por nombre, grado o grupo
+Sistema --> Administrador : Muestra resultados
+Sistema --> Maestro : Muestra resultados
+
+@enduml
