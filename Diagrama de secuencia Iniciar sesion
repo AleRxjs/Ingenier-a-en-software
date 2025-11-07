@@ -1,0 +1,10 @@
+@startuml
+actor Usuario
+participant "Interfaz del sistema" as UI
+participant "Base de datos" as DB
+
+Usuario -> UI : Ingresa usuario y contraseña
+UI -> DB : Verifica credenciales
+DB --> UI : Resultado (válido o no válido)
+UI --> Usuario : Acceso permitido o denegado
+@enduml
