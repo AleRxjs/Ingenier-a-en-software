@@ -1,0 +1,10 @@
+@startuml
+actor Administrador
+participant "Interfaz del sistema" as UI
+participant "Base de datos" as DB
+
+Administrador -> UI : Ingresa datos del estudiante
+UI -> DB : Guardar información (nombre, edad, grado, grupo)
+DB --> UI : Confirmación de guardado
+UI --> Administrador : Mensaje "Registro exitoso"
+@enduml
