@@ -1,0 +1,10 @@
+@startuml
+actor Usuario
+participant "Interfaz del sistema" as UI
+participant "Base de datos" as DB
+
+Usuario -> UI : Ingresa criterios de búsqueda
+UI -> DB : Consulta registros según criterios
+DB --> UI : Devuelve resultados
+UI --> Usuario : Muestra lista de estudiantes encontrados
+@enduml
