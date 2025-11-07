@@ -1,0 +1,10 @@
+@startuml
+object Usuario
+object UI
+object DB
+
+Usuario --> UI : 1. Solicita búsqueda
+UI --> DB : 2. Realiza consulta
+DB --> UI : 3. Devuelve resultados
+UI --> Usuario : 4. Muestra información
+@enduml
