@@ -1,0 +1,14 @@
+@startuml
+actor Usuario
+actor "Sistema de Registro" as Sistema
+
+Usuario --> (Iniciar sesión)
+(Iniciar sesión) --> Sistema : Verifica nombre de usuario y contraseña
+Sistema --> Usuario : Acceso permitido o denegado
+
+note right of Usuario
+Tipos de usuario:
+- Administrador: permisos completos
+- Maestro: solo consulta
+end note
+@enduml
