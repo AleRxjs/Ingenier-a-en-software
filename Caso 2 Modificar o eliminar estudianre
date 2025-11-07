@@ -1,0 +1,10 @@
+@startuml
+actor Administrador
+actor "Sistema de Registro" as Sistema
+
+Administrador --> (Modificar datos del estudiante)
+Administrador --> (Eliminar registro de estudiante)
+(Modificar datos del estudiante) --> Sistema : Actualiza información
+(Eliminar registro de estudiante) --> Sistema : Borra registro seleccionado
+
+@enduml
