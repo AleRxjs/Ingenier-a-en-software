@@ -1,0 +1,10 @@
+@startuml
+object Usuario
+object UI
+object DB
+
+Usuario --> UI : 1. Ingresa credenciales
+UI --> DB : 2. Verifica usuario y contraseña
+DB --> UI : 3. Respuesta válida o inválida
+UI --> Usuario : 4. Mensaje de acceso
+@enduml
