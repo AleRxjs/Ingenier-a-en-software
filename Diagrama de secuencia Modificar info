@@ -1,0 +1,13 @@
+@startuml
+actor Administrador
+participant "Interfaz del sistema" as UI
+participant "Base de datos" as DB
+
+Administrador -> UI : Selecciona estudiante a modificar
+UI -> DB : Solicita datos del estudiante
+DB --> UI : Devuelve datos actuales
+Administrador -> UI : Actualiza información
+UI -> DB : Guarda cambios
+DB --> UI : Confirmación de actualización
+UI --> Administrador : Muestra mensaje "Datos actualizados"
+@enduml
