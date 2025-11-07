@@ -1,0 +1,13 @@
+@startuml
+object Administrador
+object UI
+object DB
+
+Administrador --> UI : 1. Solicitar modificación
+UI --> DB : 2. Obtener datos actuales
+DB --> UI : 3. Retorna información
+Administrador --> UI : 4. Ingresa cambios
+UI --> DB : 5. Actualiza registro
+DB --> UI : 6. Confirmación
+UI --> Administrador : 7. "Datos actualizados"
+@enduml
