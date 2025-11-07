@@ -1,0 +1,9 @@
+@startuml
+actor Administrador
+actor "Sistema de Registro" as Sistema
+
+Administrador --> (Agregar estudiante)
+(Agregar estudiante) --> Sistema : Guarda datos (nombre, edad, grado, grupo)
+Sistema --> Administrador : Confirmación de registro
+
+@enduml
