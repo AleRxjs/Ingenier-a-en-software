@@ -1,0 +1,24 @@
+flowchart TD
+
+A[Inicio] --> B[Mostrar menú principal]
+B --> C{¿Usuario registrado?}
+C -->|No| D[Solicitar registro de usuario]
+D --> E[Guardar datos del nuevo usuario]
+E --> B
+C -->|Sí| F[Iniciar sesión]
+F --> G{¿Datos correctos?}
+G -->|No| F
+G -->|Sí| H[Mostrar opciones del sistema]
+H --> I{¿Qué desea hacer?}
+I -->|Agregar estudiante| J[Solicitar nombre, edad, grado y grupo]
+I -->|Modificar datos| K[Seleccionar estudiante y editar]
+I -->|Eliminar estudiante| L[Seleccionar alumno a eliminar]
+I -->|Consultar lista| M[Mostrar lista completa]
+J --> N[Guardar nuevo registro]
+K --> N
+L --> N
+M --> N
+N --> O{¿Desea realizar otra acción?}
+O -->|Sí| H
+O -->|No| P[Salir del sistema]
+P --> Q[Fin]
