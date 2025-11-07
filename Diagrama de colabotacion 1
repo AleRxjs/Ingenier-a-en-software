@@ -1,0 +1,14 @@
+@startuml
+object Administrador
+object UI
+object DB
+
+Administrador : Rol = Gestiona registros
+UI : Interfaz = Captura y muestra datos
+DB : Función = Almacena información
+
+Administrador --> UI : 1. Enviar datos
+UI --> DB : 2. Guardar registro
+DB --> UI : 3. Confirmar guardado
+UI --> Administrador : 4. Mensaje "Registro exitoso"
+@enduml
