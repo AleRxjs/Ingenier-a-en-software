@@ -1,0 +1,13 @@
+@startuml
+title Diagrama de estados - Modificación de Estudiante
+
+[*] --> Seleccionar_Estudiante
+
+Seleccionar_Estudiante --> Mostrando_Datos : Estudiante encontrado
+Mostrando_Datos --> Editando_Registro : Cambiar datos
+Editando_Registro --> Guardando_Cambios : Confirmar actualización
+Guardando_Cambios --> Actualización_Completada : Cambios guardados correctamente
+Guardando_Cambios --> Error_Actualizacion : Error en la base de datos
+Error_Actualizacion --> Editando_Registro : Reintentar
+Actualización_Completada --> [*] : Fin del proceso
+@enduml
