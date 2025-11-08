@@ -1,0 +1,51 @@
+@startuml
+' Forzar estilo Chen
+!theme plain
+
+entity "Estudiante" as E
+entity "Grupo" as G
+entity "Maestro" as M
+entity "Administrador" as A
+entity "Usuario" as U
+
+' Relaciones como rombos
+diamond "Pertenece" as R1
+diamond "Enseña" as R2
+diamond "Gestiona" as R3
+
+' Atributos como elipses
+circle "ID_Estudiante"
+circle "Nombre"
+circle "Edad"
+circle "Grado"
+circle "GrupoAsignado"
+circle "Materia"
+circle "Usuario_Login"
+circle "Contraseña"
+circle "Rol"
+
+' Conexiones de atributos con entidades
+E - "ID_Estudiante"
+E - "Nombre"
+E - "Edad"
+E - "Grado"
+E - "GrupoAsignado"
+
+M - "Materia"
+A - "Usuario_Login"
+A - "Contraseña"
+U - "Rol"
+
+' Conexiones de relaciones
+E - R1
+R1 - G
+
+M - R2
+R2 - G
+
+A - R3
+R3 - U
+
+' Título
+title Diagrama Entidad-Relación - Variante Chen (Modelo Conceptual)
+@enduml
