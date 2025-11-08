@@ -1,0 +1,46 @@
+@startuml
+entity "Estudiante" as Estudiante {
+  *ID_Estudiante : int
+  --
+  Nombre : varchar
+  Edad : int
+  Grado : varchar
+  Grupo : varchar
+}
+
+entity "Grupo" as Grupo {
+  *ID_Grupo : int
+  --
+  Nombre_Grupo : varchar
+  Grado : varchar
+}
+
+entity "Maestro" as Maestro {
+  *ID_Maestro : int
+  --
+  Nombre : varchar
+  Materia : varchar
+}
+
+entity "Administrador" as Admin {
+  *ID_Admin : int
+  --
+  Nombre : varchar
+  Usuario : varchar
+  Contraseña : varchar
+}
+
+entity "Usuario" as Usuario {
+  *ID_Usuario : int
+  --
+  Nombre_Usuario : varchar
+  Contraseña : varchar
+  Rol : varchar
+}
+
+' Relaciones
+Grupo ||--o{ Estudiante : contiene
+Maestro ||--o{ Grupo : enseña
+Admin ||--o{ Usuario : gestiona
+
+@enduml
